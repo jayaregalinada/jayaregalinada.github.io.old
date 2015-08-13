@@ -1,0 +1,46 @@
+#projects {
+  max-width: @container-lg;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: @padding-large-horizontal;
+  .masonry-brick {
+    float: left;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 0;
+    &.loaded {
+      opacity: 1;
+    }
+  }
+  .masonry-sizer, .masonry-brick {
+    @media (min-width: @screen-lg-min) {
+      width: 32%;
+    }
+    width: 49.1%;
+  }
+  .project-container {
+    position: relative;
+    .thumb {
+      // padding: @padding-small-vertical;
+      border: 1px solid @gray-lighter;
+      display: block;
+      background-color: #FFF;
+      overflow: hidden;
+    }
+    .description {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      z-index: 9;
+      border-left: 1px solid @gray-lighter;
+      border-right: 1px solid @gray-lighter;
+      border-bottom: 1px solid @gray-lighter;
+      padding: @padding-base-vertical @padding-base-horizontal;
+      display: none;
+      background-color: #FFF;
+      > .description-text {
+        opacity: 0;
+      }
+    }
+  }
+}

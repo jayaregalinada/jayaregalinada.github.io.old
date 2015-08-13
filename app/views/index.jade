@@ -1,0 +1,29 @@
+
+div.container
+  strong.loading.label.label-default(ng-show="status.loadingFirstTime")
+    | LOADING
+    span.blinking _
+
+div.container
+  div.text-center.text-danger(ng-show="status.error")
+    h1 {# status.errorMessage #}
+    a(ui-sref="index", ui-sref-opts="{ reload: true }") Try again
+
+
+div#projects.clearfix.all-projects.projects-all.projects-container(masonry="masonryOpts")
+  div.masonry-sizer
+  div.masonry-brick.project.items-animation(ng-repeat="project in projects", ng-mouseenter="mouseEnter($event)", ng-mouseleave="mouseLeave($event)")
+    div.project-container
+      div.thumb
+        img(ng-src="{# project.thumbnail[0].url #}", alt="{# project.name #}", class="img-responsive")
+      div.description
+        .description-text
+          header.page-header.no-margin-top
+            h4 {# project.name #}
+          div(ng-bind-html="project.description")
+
+
+
+
+
+

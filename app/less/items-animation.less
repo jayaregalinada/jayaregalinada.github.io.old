@@ -1,0 +1,28 @@
+.items-animation {
+    &.ng-enter-stagger, &.ng-leave-stagger, &.ng-move-stagger {
+        .transition-delay( .1s );
+    }
+    &.ng-enter, &.ng-leave &.ng-move {
+        .transition( e("all .3s cubic-bezier(.55, 0, .1, 1)") );
+    }
+    &.ng-enter-stagger {
+        .transition-duration( 0s );
+    }
+    &.ng-enter {
+        opacity: 0;
+        .transform( scale3d(.3, .3, .3) );
+    }
+    &.ng-enter-active {
+        opacity: 1;
+        .transform( none );
+    }
+    &.ng-leave {
+        opacity: 1;
+        .animation( zoomOut .3s );
+
+    }
+    &.ng-leave-active {
+        .transition( e("all .3s cubic-bezier(.55, 0, .1, 1)") );
+        opacity: 0;
+    }
+}

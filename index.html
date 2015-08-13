@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello World</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://--><!--[if lt IE 8]
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="canvas-wrapper">
+      <canvas id="glitch_canvas"></canvas>
+    </div>
+    <nav id="navigation_category" role="category_navigation" ng-show="$state.is('index')" class="container">
+      <ul class="nav nav-pills nav-justified text-center">
+        <li><a href="">ALL</a></li>
+        <li ng-repeat="cat in $categories"><a href="">{# cat.name #}</a></li>
+      </ul>
+    </nav>
+    <div ui-view="projects"></div>
+    <footer id="footer">
+      <div class="container">
+        <h6>All Projects are rights reserved. Copyright 2015</h6>
+        <ul class="contacts list-inline">
+          <li><a href="https://www.facebook.com/jayaregalinada" target="_BLANK" class="fa fa-facebook-official"></a></li>
+          <li><a href="https://www.twitter.com/jayaregalinada" target="_BLANK" class="fa fa-twitter"></a></li>
+          <li><a href="https://plus.google.com/+JayAreGalinada" target="_BLANK" class="fa fa-google-plus"></a></li>
+          <li><a href="http://undistinguished.tumblr.com" target="_BLANK" class="fa fa-tumblr"></a></li>
+          <li><a href="https://steamcommunity.com/id/jayaregalinada" target="_BLANK" class="fa fa-steam"></a></li>
+          <li><a href="https://www.github.com/jayaregalinada" target="_BLANK" class="fa fa-github"></a></li>
+          <li><a href="https://www.linkedin.com/in/jayaregalinada" target="_BLANK" class="fa fa-linkedin"></a></li>
+          <li><a href="skype:jayaregalinada" class="fa fa-skype"></a></li>
+          <li><a href="mailto:jayaregalinada@gmail.com" target="_BLANK" class="fa fa-envelope"></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

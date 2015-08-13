@@ -1,0 +1,23 @@
+
+<div class="container"><strong ng-show="status.loadingFirstTime" class="loading label label-default">LOADING<span class="blinking">_</span></strong></div>
+<div class="container">
+  <div ng-show="status.error" class="text-center text-danger">
+    <h1>{# status.errorMessage #}</h1><a ui-sref="index" ui-sref-opts="{ reload: true }">Try again</a>
+  </div>
+</div>
+<div id="projects" masonry="masonryOpts" class="clearfix all-projects projects-all projects-container">
+  <div class="masonry-sizer"></div>
+  <div ng-repeat="project in projects" ng-mouseenter="mouseEnter($event)" ng-mouseleave="mouseLeave($event)" class="masonry-brick project items-animation">
+    <div class="project-container">
+      <div class="thumb"><img ng-src="{# project.thumbnail[0].url #}" alt="{# project.name #}" class="img-responsive"/></div>
+      <div class="description">
+        <div class="description-text">
+          <header class="page-header no-margin-top">
+            <h4>{# project.name #}</h4>
+          </header>
+          <div ng-bind-html="project.description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+//- partials/category_navigation.jade
+nav(id="navigation_category", role="category_navigation", ng-show="$state.is('index')", class="container")
+    ul(class="nav nav-pills nav-justified text-center")
+        li(role=category)
+            a(href="") ALL
+        li(role=category, ng-repeat="cat in $categories")
+            a(href="") {# cat.name #}
+
