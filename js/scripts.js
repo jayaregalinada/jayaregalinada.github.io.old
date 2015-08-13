@@ -31,6 +31,8 @@ window._app.run(function($rootScope, $state, $stateParams, $window, $log, $http,
   $rootScope.$stateParams = $stateParams;
   $http.get(Project.getCategoryUrl()).success(function(s) {
     $rootScope.$categories = s.success.data;
+  }).error(function(e) {
+    $rootScope.$categoriesError = true;
   });
   $rootScope.$on('errorOccured', function() {
     $('body').addClass('error-occured');

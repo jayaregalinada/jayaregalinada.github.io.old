@@ -6990,6 +6990,7 @@ a.list-group-item-danger.active:focus {
 }
 #navigation_category a {
   color: #555555;
+  text-transform: uppercase;
 }
 .blinking {
   -webkit-animation: blink 0.2s linear infinite;

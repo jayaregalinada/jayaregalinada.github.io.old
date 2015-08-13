@@ -16,14 +16,14 @@
     <div class="canvas-wrapper">
       <canvas id="glitch_canvas"></canvas>
     </div>
-    <nav id="navigation_category" role="category_navigation" ng-show="$state.is('index')" class="container">
+    <nav id="navigation_category" role="category_navigation" ng-hide="$categoriesError" ng-show="$state.is('index')" class="container">
       <ul class="nav nav-pills nav-justified text-center">
         <li><a href="">ALL</a></li>
         <li ng-repeat="cat in $categories"><a href="">{# cat.name #}</a></li>
       </ul>
     </nav>
-    <div ui-view="projects"></div>
-    <footer id="footer">
+    <div ui-view="projects" class="clearfix"></div>
+    <footer id="footer" class="clearfix">
       <div class="container">
         <h6>All Projects are rights reserved. Copyright 2015</h6>
         <ul class="contacts list-inline">
