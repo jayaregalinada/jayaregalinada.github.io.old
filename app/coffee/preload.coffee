@@ -43,7 +43,9 @@ window._app.run ($rootScope, $state, $stateParams, $window, $log, $http, Project
   $http.get Project.getCategoryUrl()
   .success (s)->
     $rootScope.$categories = s.success.data
-
+    return
+  .error (e)->
+    $rootScope.$categoriesError = true
     return
 
   $rootScope.$on 'errorOccured', ->
